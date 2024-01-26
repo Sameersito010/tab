@@ -1,0 +1,40 @@
+<ul class="nav nav-pills">
+    <li class="nav-item" (click)="selectSkill('javascript')">
+        <a href="javascript:;" class="nav-link">Javascript</a>
+        [ngClass]="{
+            active:selectSkillset.tolowerCase().includes('javascript')
+        }"
+    </li>
+    <li class="nav-item" (click)="selectSkill('angular')">
+        <a href="javascript:;" class="nav-link">Angular</a>
+        [ngClass]="{
+            active:selectSkillset.tolowerCase().includes('angular')
+        }"
+    </li>
+    <li class="nav-item" (click)="selectSkill('node')">
+        <a href="javascript:;" class="nav-link">Node</a>
+        [ngClass]="{
+            active:selectSkillset.tolowerCase().includes('node')
+        }"
+    </li>
+</ul>
+
+<div class="tab">
+     <div class="card" *ngIf="selectSkillSet.toLocaleLowerCase().includes('javascript')">
+        <div class="card-body">
+          <strong>  Lorem </strong>ipsum, dolor sit amet consectetur adipisicing elit. Harum, eligendi aspernatur. Necessitatibus id aliquid ipsam, delectus nisi, perspiciatis amet mollitia quisquam officiis exercitationem soluta a ut dicta labore consectetur porro!
+        </div>
+     </div>
+
+     <div class="card" *ngIf="selectSkillSet.toLocaleLowerCase().includes('angular')">
+        <div class="card-body">
+          <strong>  Lorem </strong>ipsum, dolor sit amet consectetur adipisicing elit. Harum, eligendi aspernatur. Necessitatibus id aliquid ipsam, delectus nisi, perspiciatis amet mollitia quisquam officiis exercitationem soluta a ut dicta labore consectetur porro!
+        </div>
+     </div>
+
+     <div class="card" *ngIf="selectSkillSet.toLocaleLowerCase().includes('node')">
+        <div class="card-body">
+            <strong>Lorem </strong>ipsum, dolor sit amet consectetur adipisicing elit. Harum, eligendi aspernatur. Necessitatibus id aliquid ipsam, delectus nisi, perspiciatis amet mollitia quisquam officiis exercitationem soluta a ut dicta labore consectetur porro!
+        </div>
+     </div>
+</div>
